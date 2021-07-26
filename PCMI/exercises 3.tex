@@ -1,0 +1,240 @@
+\documentclass[12pt]{report}
+
+\usepackage{enumitem}
+%\setlist{noitemsep}
+\usepackage{amsfonts}
+  \usepackage{amsmath,amsthm}
+\usepackage[margin=1.5cm,bottom=2cm]{geometry}
+
+\newbox\sqrtvelubox
+\setbox\sqrtvelubox\hbox{$\sqrt{\vphantom{0}}$\'elu}
+\newcommand{\sqrtvelu}{\copy\sqrtvelubox}
+
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=magenta,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+
+
+
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Fpbar}{\overline{\mathbb{F}}_p}
+\newcommand{\Fqbar}{\overline{\mathbb{F}}_q}
+\newcommand{\Gal}{\mathrm{Gal}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\EE}{\mathcal{E}}
+\newcommand\OOu[1]{\OO_{\!{#1}}}
+\newcommand{\QQ}{\mathcal{Q}}
+\newcommand{\RR}{\mathcal{R}}
+\newcommand{\II}{\mathcal{I}}
+\newcommand{\JJ}{\mathcal{J}}
+\newcommand{\mA}{\mathcal{A}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Ell}{\mathcal{E}\hspace{-0.065cm}\ell\hspace{-0.035cm}\ell}
+%\renewcommand{\i}{\mathbf{i}}
+%\renewcommand{\j}{\mathbf{j}}
+\renewcommand{\ij}{\mathbf{ij}}
+\newcommand{\ji}{\mathbf{ji}}
+
+\newcommand\Zsqrt[1]{\Z[\hspace{-.1em}\sqrt{#1}]}
+\newcommand\Qsqrt[1]{\Q(\!\sqrt{#1})}
+\newcommand\Leg[2]{\left( \frac{#1}{#2}\right)}
+\newcommand{\cl}{\operatorname{cl}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\End}{\mathrm{End}}
+\newcommand{\Endp}{\mathrm{End}_p}
+\newcommand{\id}{\mathrm{id}}
+
+\newcommand{\afrak}{\mathfrak{a}}
+\newcommand{\bfrak}{\mathfrak{b}}
+\newcommand{\cfrak}{\mathfrak{c}}
+\newcommand{\gfrak}{\mathfrak{g}}
+\newcommand{\kfrak}{\mathfrak{k}}
+\newcommand{\lfrak}{\mathfrak{l}}
+\newcommand{\mfrak}{\mathfrak{m}}
+\newcommand{\pfrak}{\mathfrak{p}}
+\newcommand{\rfrak}{\mathfrak{r}}
+\newcommand{\tfrak}{\mathfrak{t}}
+\newcommand{\ufrak}{\mathfrak{u}}
+\newcommand{\xfrak}{\mathfrak{x}}
+\newcommand{\yfrak}{\mathfrak{y}}
+\newcommand{\zfrak}{\mathfrak{z}}
+\newcommand{\sfrak}{\mathfrak{s}}
+\newcommand{\Pfrak}{\mathfrak{P}}
+\newcommand{\tm}{T_m}
+\newcommand{\Pinf}{\mathbf{0}}
+
+\newcommand\norm[1]{\mathrm{N}(#1)}
+\newcommand\trace{\operatorname{tr}}
+
+\newcommand\im{\operatorname{im}}
+\newcommand\Frob{\operatorname{Frob}}
+
+\newcommand{\hooklongrightarrow}{\lhook\joinrel\longrightarrow}
+\newcommand{\hooklongleftarrow}{\longleftarrow\joinrel\rhook}
+\DeclareRobustCommand\twoheadlongrightarrow{\relbar\joinrel\twoheadrightarrow}
+
+\newcommand{\infpt}{\infty} % point at infinity
+\DeclareMathOperator{\poly}{poly}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\val}{val}
+\DeclareMathOperator{\cond}{cond}
+
+
+
+  \newtheorem{theorem}{Theorem}[section]
+  \newtheorem{lemma}[theorem]{Lemma}
+  \newtheorem{conj}[theorem]{Conjecture}
+  \newtheorem{cor}[theorem]{Corollary}
+  \newtheorem{prop}[theorem]{Proposition}
+  \newtheorem{claim}[theorem]{Claim}
+  \newtheorem{definition}[theorem]{Definition}
+  \newtheorem{fact}[theorem]{Fact}
+  \newtheorem{remark}[theorem]{Remark}
+  \newtheorem{problem}[theorem]{Problem}
+  \newtheorem{question}[theorem]{Question}
+  \newtheorem{example}[theorem]{Example}
+  \newtheorem{warning}[theorem]{Warning}
+  
+  \newcommand{\Cl}{\operatorname{Cl}}
+  \newcommand{\Hom}{\operatorname{Hom}}
+  \newcommand{\GL}{\operatorname{GL}}
+  \newcommand{\tr}{\operatorname{tr}}
+
+  \newcommand{\nrd}{\operatorname{nrd}}
+  \newcommand{\FpGraph}{{\mathcal{G}_\ell(\mathbb{F}_p)}}
+  \newcommand{\FpSubGraph}{\mathcal{S}}
+  \newcommand{\FpBarGraph}{{\mathcal{G}_\ell(\overline{\mathbb{F}_p})}}
+  
+\newcommand{\FpBarGraphtwo}{{\mathcal{G}_2(\overline{\mathbb{F}_p})}}
+\newcommand{\FpGraphtwo}{{\mathcal{G}_2(\mathbb{F}_p})}
+\newcommand{\FpGraphthree}{{\mathcal{G}_3(\mathbb{F}_p})}
+\newcommand{\FpBarGraphthree}{{\mathcal{G}_3(\overline{\mathbb{F}_p})}}
+\newcommand{\jp}{{\mathbf{j}}}
+\newcommand{\jpp}{{\mathbcal{j}}}
+
+\newcommand{\trd}{\operatorname{trd}}
+\newcommand{\FF}{\mathbb{F}}
+
+\newcommand{\CC}{\mathbb C}
+\newcommand{\Fp}{\mathbb{F} _p}
+\newcommand{\Glk}{\mathcal{G}_{\ell}(K)}
+\newcommand{\Glfpbar}{\mathcal{G}_{\ell}(\overline{\mathbb{F}}_p)}
+\newcommand{\Glfp}{\mathcal{G}_{\ell}(\mathbb F_p)}
+
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\Tr}{\operatorname{Tr}}
+
+
+\renewcommand{\O}{\mathcal{O}}
+\newcommand{\disc}{\operatorname{disc}}
+\newcommand{\different}{\mathcal{D}(\O) }
+
+\begin{document}
+
+\hyphenpenalty 8000
+\sloppy
+
+\centerline{\Large\bf David Kohel's lectures  \\  Quaternions (\today)}
+
+\smallskip
+
+
+\begin{description}
+\item[The bilinear map and quadratic form]
+Symmetric bilinear map on $\O$ is given as  \[\langle x, y \rangle = \norm{x+y}-\norm{x}-\norm{y}\] 
+define the associated Gram matrix
+\[ (a_{ij} = (\langle x_i, x_j \rangle ))\]
+for a given basis $x_1, \dots, x_4$. This has discriminant $N^2$ for $N$ being the discriminant of the quaternion algebra.
+
+\item[Lemma 1.4] If $x, y$ are elements such that $\Q[x] \neq \Q[y]$ and $D_1, D_2$ are the discriminants of $\Z[x], \Z[y]$, then for $T = \Tr(x)\Tr(y) - 2 \Tr(xy)$ we have
+\[ [x,y] = xy - yx = - \frac{D_1D_2 -T^2 }{4}\]
+
+We want $4N = D_1 D_2 - T^2 $. The discriminants come from determinants of certain matrices with the inner products. 
+
+
+\item[Successive minima] $a_k = $smallest value $a$ such that $\{ x \in \O : \langle x,x \rangle \leq a \}$ generates a submodule of rank $k$. By constructions, this is attained at some elements. 
+
+There are various bounds on the successive minima, in terms of the Hermite constant $\gamma_n$. For us, we just need $\gamma_4^4=  4$ (and later $\gamma_2, \gamma_3$ in proofs) and so \[ \det(\O) = N^2 \leq \prod a_k \leq \gamma_n^n \det(\O) = 4  N^2 .\] 
+
+From this and the values being successive minima, we can write down regions in which those values need to live. Throw more math at it to get sharper regions.
+
+ Convenient to consider $r_i = \log_{N/4}(\norm{x_i})$ for $x_i$ the element attaining the minimum $a_i$.
+ 
+ \item[Discriminant module] is the module $\O / \Z$ (considered as a $\Z$-module). This can be identified with $\Z \wedge \O \subset \Lambda^2 (\O)$. The determinant on this module is given as 
+ \[ \det(x \wedge y) = \det \left( \begin{matrix}
+ \langle x, x \rangle & \langle y,x \rangle \\ \langle x, y \rangle & \langle y, y \rangle
+\end{matrix}  \right) \]
+whose restriction to $1 \wedge x $ satisfies $\det(1 \wedge x ) = |\disc(\Z[x])|$. And so $\det(m \wedge x) = \det(1 \wedge x)$ for $m \in \Z$. 
+
+The discriminant module has determinant $4N^2$. If $\O = \Z \langle 1, x, y, z\rangle$ then the discriminant is spanned by $1 \wedge x, 1 \wedge y, 1 \wedge z$. So if we want to figure out the quadratic form of this quadratic module, we just need to figure out the matrix of the bilinear map:
+
+ \[ \det( 1 \wedge y_1, 1 \wedge y_2) = \det \left( \begin{matrix}
+ \langle 1, 1 \rangle & \langle y_1, 1 \rangle \\ \langle 1, y_2 \rangle & \langle y_1, y_2 \rangle
+\end{matrix}  \right) \]
+
+This allows us - in principle, or so far with a lot of pain - to write down all the Gram matrix of the discriminant module.
+
+Moreover, we can figure out the regions in which the successive minima need to lie. Writing $D_1, D_2, D_3$ for the successive minima and $s_i$ for their $\log_{4N}(D_i)$, then we can write down domains in which they lie. 
+
+\item[Prop 1.9] The band $1 \leq s_1 + s_2 \leq 1< 1 + \log_{4N}{4/3}$ contains only points asociated to maximal orders with an element of norm $N$. 
+
+In this region, we get $D_1 D_2 - T^2 = 4N$ and from Lemma 1.4 we get an actual element of norm $N$ as the commutator.
+
+
+\item[Dual discrimimant module] the different is \[ \mathcal{D}(\O) = \{ x \in B : \Tr(x\O) \subset \Z \}^{-1}\]
+and we define the DDM as 
+\[ \frac{1}{N}  \left( \Z \wedge \Z [\mathcal{D}(\O) ] \right).\]
+
+The different has the property that every suborder of $\Z[\different]$ has discriminant divisible by $N$ so: 
+\begin{center}
+This module represent $m$ $\leftrightarrow$ there is a subring of $\O$ of discriminant $-mN$ 
+\end{center}
+Advantages: DDM has discriminant $4N$, so smaller than the discriminant module?
+
+Again can write down regions in which the (first two) successive minima need to lie. 
+
+\item[Lemma 1.13] The logarithmic points associated to the DDM  lie on the lines \[  t_i = \log_{4N}(m)\] for $-mN$ a discriminant. (this seems like $i = 1$).
+
+\item[Maximal orders with an embedding of order of discriminant $-p$] are exactly those whose DDM represents $1$. 
+
+\item[Maximal order with an embedding of order of disc $-4p$] represent $4$, but their first successive min can be $1$ or $3$, which can happen (example in the notes).
+
+
+\item[Section 2] Shows that from the data $D_1, D_2, T$ we can reconstruct the maximal order. Assuming that the orders with discriminant $D_1, D_2$ are optimally embedded in $\O$, generated by $\alpha, \beta$, then 
+
+\begin{itemize}
+\item The quaternion order $\Z \langle \alpha, \beta \rangle$ has discriminant $D_1D_2 - T^2$;
+\item the commutator $[\alpha, \beta]$ gives a quadratic subring of discriminant $D_1D_2 - T^2 $.
+\end{itemize}
+
+
+\item[Norm forms, ideals, $\ell$-adic representation]
+
+Normalized ideal norm $q_I : I \rightarrow \Z$ is independent of the ideal class representative and has discriminant $N^2$.
+
+\item[Lemma 3.2] Determine representations of powers of $\ell$ by $q_I$ by using the knowledge of the $\ell$-adic zeros:
+
+The surface $S = V(q_I) \subset \mathbb{P}(I\otimes \Z_\ell) = \mathbb{P}^3$ is isomorphic to $\mathbb{P}^1 \times \mathbb{P}^1$ over $\Z_\ell$.
+
+\begin{proof}
+Locally, all ideals are principal, and the reduced norm is independent of the class set representative, so replace $I_\ell$ with $M_2 (\Q_\ell)$ and the norm form with the determinant. So then zeros of the form are the determinant zero matrices, ie $\{(a:b:c:d) : ad-bc = 0\}$, which is the image of the Serge embedding. 
+\end{proof} 
+
+\item[How to lift the solution to $I$] 
+
+\end{description}
+
+
+\end{document}
