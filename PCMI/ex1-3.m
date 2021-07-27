@@ -1,6 +1,6 @@
 //Modular polynomials
 
-p = 431;
+p := 431;
 F<z>:= FiniteField(p, 2);
 E:= EllipticCurve([F!26, F!379]);
 E;
@@ -8,7 +8,7 @@ IsSupersingular(E);
 
 j:= jInvariant(E);
 
-R<X, Y>:=PolynomialRing(F, 2);
+R<X,Y>:=PolynomialRing(F, 2);
 S<Z>:=PolynomialRing(F);
 Phi3 :=R!ClassicalModularPolynomial(3);
 f := Evaluate(Phi3, [j, Y]); f; Factorization(f);
