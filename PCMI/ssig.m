@@ -106,3 +106,9 @@ SSIG:= function(q, ell)
   // BFS on the graph to generate all the vertices and edges
 
 end function;
+
+
+Vertices, Edges := SSIG(p, ell);
+Vertices;
+// currently without the correct mutliplicity and directed
+Edges;
