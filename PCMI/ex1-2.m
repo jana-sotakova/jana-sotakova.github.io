@@ -1,6 +1,6 @@
 //Define the finite field
 p := 431;
-F := FiniteField(p^2);
+F<z> := FiniteField(p^2);
 
 E:= EllipticCurve([F!1, F!0]);
 
@@ -8,16 +8,16 @@ E:= EllipticCurve([F!1, F!0]);
 jInvariant(E);
 
 // Point on an elliptic curve:
-P:= E![0,0];
+P2:= E![0,0];
 // Check the order of this point
-Order(P);
+Order(P2);
 
 
 // Compute an isogeny with kernel P:
 R<X> := PolynomialRing(F);
 
 // IsogenyFromKernel takes in the kernel polynomial of the isogeny
-E2, phi := IsogenyFromKernel(E, X - P[1]);
+E2, phi := IsogenyFromKernel(E, X - P2[1]);
 
 E2, phi;
 
@@ -55,24 +55,31 @@ end while;
 
 // Find a second basis point for the E[16] torsion.
 Q := 3^3*Random(E);
-while (Order(Q) ne 16) or (WeilPairing(P, Q, 16) eq 1) do
+while (8*Q eq E!0) or (WeilPairing(P, Q, 16)^8 eq 1) do
   Q := 3^3*Random(E);
 end while;
 
-// Weil pairing might not be enough for even order torsion;
-// chech whether P, Q generate the full 16-torsion
-while #[a*P + b*Q : a,b in [0..15] ] ne 16^2 do
-  Q := 3^3*Random(E);
-end while;
+// We can also check whether P, Q generate the full 16-torsion
+// By checking that 8P != 8Q.
+
+//while 8*P eq 8*Q and do
+//  Q := 3^3*Random(E);
+//end while;
 
 // All the points of order dividing 16 are linear combinations of P, Q
 // We want exact order 16, and note that T and a*T generate the same kernel for
 // a in (Z/16Z)^*
-
+for a,b in [0..15] do
+  T := a*P + b*Q;
+  if not (T in Gen) then
+    Gen:= Append(Gen, T);
+    end if;
+end for;
+#Gen;
 
 // Figuring out all the subgroups is not trivial (can't see it now).
 // generates all points of exact order 16
-points := [a*P+b*Q : a,b in [0..15] |  Order(a*P+b*Q) eq 16] ;
+points := [a*P+b*Q : a,b in [0..15] |  8*(a*P+b*Q) ne E!0] ;
 
 // I don't know how to define a list of isogenies from scratch
 // This forces a list of isogenies (Magma universe)
