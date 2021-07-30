@@ -66,16 +66,6 @@ end while;
 //  Q := 3^3*Random(E);
 //end while;
 
-// All the points of order dividing 16 are linear combinations of P, Q
-// We want exact order 16, and note that T and a*T generate the same kernel for
-// a in (Z/16Z)^*
-for a,b in [0..15] do
-  T := a*P + b*Q;
-  if not (T in Gen) then
-    Gen:= Append(Gen, T);
-    end if;
-end for;
-#Gen;
 
 // Figuring out all the subgroups is not trivial (can't see it now).
 // generates all points of exact order 16

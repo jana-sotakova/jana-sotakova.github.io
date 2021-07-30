@@ -1,0 +1,68 @@
+
+>
+>
+> iload "ex1-3.m";
+Interactive-loading "ex1-3.m"
+> //Modular polynomials
+> p := 431;
+> F<z>:= FiniteField(p, 2);
+> E:= EllipticCurve([F!26, F!379]);
+> E;
+Elliptic Curve defined by y^2 = x^3 + 26*x + 379 over GF(431^2)
+> IsSupersingular(E);
+true
+> j:= jInvariant(E);
+> R<X,Y>:=PolynomialRing(F, 2);
+> S<Z>:=PolynomialRing(F);
+> Phi3 :=R!ClassicalModularPolynomial(3);
+> f := Evaluate(Phi3, [j, Y]); f; Factorization(f);
+Y^4 + 428*Y^3 + 267*Y^2 + 190*Y + 117
+[
+    <Y + z^37758, 1>,
+    <Y + 281, 1>,
+    <Y + z^112578, 1>,
+    <Y + 324, 1>
+]
+> N := [f[1] : f in Roots(Evaluate(Phi3, [j, Z]))];
+> N;
+[ z^19698, 107, z^130638, 150 ]
+> Phi16 := R!ClassicalModularPolynomial(16);
+> f := Evaluate(Phi16, [j, Z]);
+> Factorization(f);
+[
+    <Z, 2>,
+    <Z + z^10275, 1>,
+    <Z + z^37758, 1>,
+    <Z + 75, 2>,
+    <Z + 364, 1>,
+    <Z + 242, 2>,
+    <Z + 427, 1>,
+    <Z + z^112578, 1>,
+    <Z + 12, 2>,
+    <Z + 197, 1>,
+    <Z + 329, 2>,
+    <Z + z^156045, 1>,
+    <Z + 288, 2>,
+    <Z + 412, 3>,
+    <Z + 189, 2>
+]
+> Roots(f);
+[ <0, 2>, <4, 1>, <z^19698, 1>, <419, 2>, <234, 1>, <102, 2>, <z^63165, 1>, <143, 2>, <19, 3>, <242, 2>, <z^103155, 1>,
+<z^130638, 1>, <356, 2>, <67, 1>, <189, 2> ]
+> primes := [ell : ell in  [1..11] | IsPrime(ell)];
+> primes;
+[ 2, 3, 5, 7, 11 ]
+> for ell in primes do
+for>   Phi := R!ClassicalModularPolynomial(ell);
+for>   print ell, Roots(Evaluate(Phi, [Z,Z]));
+for> end for;
+2 [ <4, 1>, <242, 1>, <73, 2> ]
+3 [ <0, 1>, <419, 2>, <125, 1>, <242, 2> ]
+5 [ <4, 2>, <107, 2>, <419, 2>, <358, 1>, <19, 2>, <381, 1> ]
+7 [ <0, 2>, <107, 2>, <241, 2>, <125, 2>, <61, 2>, <374, 1>, <356, 2>, <73, 1> ]
+11 [ <112, 2>, <57, 2>, <107, 2>, <419, 1>, <274, 2>, <143, 2>, <242, 2>, <z^94686, 1>, <374, 2>, <z^128226, 1>, <422,
+3>, <73, 2> ]
+>
+>
+>
+>
