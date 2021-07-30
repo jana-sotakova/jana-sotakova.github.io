@@ -1,7 +1,7 @@
 ### Code from "Adventures in Supersingularland" https://arxiv.org/abs/1909.07779
 ### Authors: Sarah Arpin, Catalina Camacho-Navarro, Kristin Lauter, Joelle Lim, Kristina Nelson, Travis Scholl, Jana Sotáková.
 
-### harcoded modular polynomials for ell = 2,3
+### hardcoded modular polynomials for ell = 2,3
 
 R.<X,Y> = ZZ[]
 ModularPoly = {}
@@ -43,6 +43,7 @@ def build_isogeny_graph_over_Fpbar(p, l, steps=oo):
     (see https://math.mit.edu/~drew/ClassicalModPolys.html) and in Sage
     via `ClassicalModularPolynomialDatabase()`.
     """
+    ## phi = ClassicalModularPolynomialDatabase()[l]
     phi = ModularPoly[l]
     def get_neighbors(j):
         """
@@ -76,7 +77,11 @@ while (p % 12) != 1:
     p = next_prime(p)
 p
 
+## or define your prime in any other way
 
+## you can choose ell = 2,3,5; otherwise, need to load
+## the correct modular polynomial
+ell = 2
 
-G = build_isogeny_graph_over_Fpbar(p, 2).to_undirected()
+G = build_isogeny_graph_over_Fpbar(p, ell).to_undirected()
 G.show(talk=True , figsize = [10,20])
