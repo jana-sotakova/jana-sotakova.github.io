@@ -1,0 +1,52 @@
+
+>
+> iload "ex3-1.m";
+Interactive-loading "ex3-1.m"
+> // Define the quaternion algebra:
+> // p equiv 3 mod 4
+> p := 67;
+> B := QuaternionAlgebra< RationalField() | -1, -p >;
+> _, i, j, k := Explode(Basis(B));
+> i^2 eq -1;
+true
+> j^2 eq -p;
+true
+> RamPrimes := RamifiedPrimes(B); RamPrimes;
+[ 67 ]
+> D := Discriminant(B); D;
+67
+> for q in RamPrimes do
+for>   assert D mod q eq 0;
+for> end for;
+> // p not 3 mod 4:
+> // need to find a small primes r with r = 3 mod 4
+> // and r a non-square mod p
+> p := 41;
+> r := 3;
+> while (r mod 4 ne 3) or KroneckerSymbol(-r, p) ne -1 do
+while>   r := NextPrime(r);
+while> end while;
+> print r;
+3
+> B<i,j, k> := QuaternionAlgebra< RationalField() | -r, -p >;
+> Basis(B);
+[ 1, i, j, k ]
+> i^2 eq -r;
+true
+> j^2 eq -p;
+true
+> // Same check of ramification
+> RamPrimes := RamifiedPrimes(B); RamPrimes;
+[ 41 ]
+> D := Discriminant(B); D;
+41
+> for q in RamPrimes do
+for>   assert D mod q eq 0;
+for> end for;
+> /// define the element
+> //  2 + i ^"^╚^╥ 3j + 4k
+> w := B![2, 1, -3, 4];
+> // or w := 2 + i - 3*j +4k;
+> Norm(w), Trace(w), MinimalPolynomial(w);
+2344 4 $.1^2 - 4*$.1 + 2344
+>
