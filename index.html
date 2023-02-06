@@ -57,7 +57,7 @@
          <br><br>
          From December 2022 until March 2023, I am on a leave
          from my PhD, doing an internship with
-         Kristin Lauter at Facebook AI Research.
+         Kristin Lauter at Meta AI.
          <br>
 
          <br>
@@ -85,24 +85,35 @@
       <h1>News</h1>
 
       <ul>
+        <li>
+      	\<b>Disorientation faults in CSIDH</b> were accepted to Eurocrypt 2023! The preprint is here
+      	<a href="https://eprint.iacr.org/2022/1202">ePrint 2022/1202</a>.
+      	This is joint work with
+      	Gustavo Banegas, Juliane Krämer, Tanja Lange, Michael Meyer,
+      	Lorenz Panny, Krijn Reijnders, and Monika Trimoska.
+
+        <br> <i>Summary:</i> While this is a physical attack (specifically, a fault-injection attack), we
+        do exploit a lot of the inherent structure present in computing isogenies.
+        Specifically, our threat model assumes we can flip the direction of some isogeny steps
+        during the class group action computation.
+        We overexamine what information this leaks - and we show that in almost all implementations,
+        one can recover the whole secret key from a very modest number of successful faults!
+      	</li>
+
+        <li>
+          Finished my lovely collaboration with Jonathan Komada Eriksen, Lorenz Panny and Mattia Veroni
+          on making the Deuring correspondence more accessible - and easy to work with.
+          Our preprint is public <a href="https://eprint.iacr.org/2023/106.pdf">on eprint</a>,
+          the code is in a GitHub repo <a href="https://github.com/friends-of-quaternions/deuring">friends-of-quaternions/deuring</a>.
+
+          <br> <i>Summary:</i> We speed up the computation of the Deuring correspodence in general characteristic,
+          using a couple of neat tricks to work with torsion points over extensions -- and selecting which torsion points to work with.
+          We give Sage code for everything: the main parts are the KLPT and IdealToIsogeny algorithms.
+        </li>
+
+
       	<li> From December 2022 until March 2023, I will be an intern for Kristin Lauter
-	at Facebook AI Research. </li>
-
-
-	<li>
-	We finished our paper <b>Disorientation faults in CSIDH</b>, available as
-	<a href="https://eprint.iacr.org/2022/1202">ePrint 2022/1202</a>.
-	Joint work with
-	Gustavo Banegas, Juliane Krämer, Tanja Lange, Michael Meyer,
-	Lorenz Panny, Krijn Reijnders, and Monika Trimoska.
-
-	<br> <i>Summary:</i> While this is a physical attack (specifically, a fault-injection attack), we
-	do exploit a lot of the inherent structure present in computing isogenies.
-	Specifically, our threat model assumes we can flip the direction of some isogeny steps
-	during the class group action computation.
-	We overexamine what information this leaks - and we show that in almost all implementations,
-	one can recover the whole secret key from a very modest number of successful faults!
-	</li>
+	at Meta AI. </li>
 
 
 	<li> I attended the Leuven Isogeny Days 3
@@ -165,11 +176,18 @@
 
       <ul>
 
+        <li> <b>Deuring for the People: Supersingular Elliptic Curves with Prescribed Endomorphism Ring in General Characteristic</b>
+          <br> Jonathan Komada Eriksen1, Lorenz Panny, Jana Sotáková, and Mattia Veroni
+        <br> Submitted; available on eprint as <a href="https://eprint.iacr.org/2023/106.pdf">Report 2023/106</a>.
+        <br> Sage code available as GitHub repo <a href="https://github.com/friends-of-quaternions/deuring">friends-of-quaternions/deuring</a>.
+        </li>
+
+
 
       	<li> <b>Disorientation faults in CSIDH</b>
           <br> Gustavo Banegas, Juliane Krämer, Tanja Lange, Michael Meyer,
 	Lorenz Panny, Krijn Reijnders, Jana Sotáková, Monika Trimoska
-        <br>  Available on eprint as <a href="https://eprint.iacr.org/2022/1202">Report 2022/1202</a>.
+        <br>  Accepted at Eurocrypt 2023, available on eprint as <a href="https://eprint.iacr.org/2022/1202">Report 2022/1202</a>.
      	<br> My poster from ANTS is available
      	<a href="slides/ants_poster_jana.pdf">here</a>.
         </li>
@@ -286,7 +304,7 @@ at <a href="https://eprint.iacr.org/2019/1056">eprint</a> or at
 
   <footer>
     <p>
-    Updated:01/23/2023   </p>
+    Updated:02/06/2023   </p>
     <p>© 2019 <a href="https://jana-sotakova.github.io/"> Jana Sotáková</a></p>
 
   </footer>
