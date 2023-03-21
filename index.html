@@ -86,6 +86,23 @@
       <h1>News</h1>
 
       <ul>
+
+        <li>
+          Finished up the fun project 
+          <b>SALSA PICANTE: a machine learning attack on LWE with binary secrets</b>
+          <br> Cathy Li, Jana Sotáková, Emily Wenger, Mohamed Malhou, Evrard Garcelon, Francois Charton, and Kristin Lauter
+          <br> eprint: <a href="https://eprint.iacr.org/2023/340">Report 2023/340</a>;
+          arxiv: <a href="https://arxiv.org/abs/2303.04178">arXiv:2303.04178</a>.
+          <br> Training transformers to learn from LWE samples to try to recover the secrets. Main contributions:
+          reduced data requierement to linear number of samples (machine learning models use millions of samples to learn), 
+          added a preprocessing step that turns the samples into ones from which the transformer learns better; 
+          novel cross-attention mechanism that can read-off the secret from the transformer itself.
+          <br> Pushed the dimensions and hamming weights to n=350 and Hamming weights ~n/10. Still long way to go to threaten
+          real-world schemes, but this is a massive improvement over the previous Salsa paper (n=128 with h=3)!
+        </li>
+
+
+
         <li>
       	<b>Disorientation faults in CSIDH</b> were accepted to Eurocrypt 2023! The preprint is here
       	<a href="https://eprint.iacr.org/2022/1202">ePrint 2022/1202</a>.
@@ -177,8 +194,15 @@
 
       <ul>
 
+        <li><b>SALSA PICANTE: a machine learning attack on LWE with binary secrets</b>
+          <br> Cathy Li, Jana Sotáková, Emily Wenger, Mohamed Malhou, Evrard Garcelon, Francois Charton, and Kristin Lauter
+          <br> available on eprint as <a href="https://eprint.iacr.org/2023/340">Report 2023/340</a>;
+          <br> available on arxiv as <a href="https://arxiv.org/abs/2303.04178">arXiv:2303.04178</a>.
+        </li>
+
+
         <li> <b>Deuring for the People: Supersingular Elliptic Curves with Prescribed Endomorphism Ring in General Characteristic</b>
-          <br> Jonathan Komada Eriksen1, Lorenz Panny, Jana Sotáková, and Mattia Veroni
+          <br> Jonathan Komada Eriksen, Lorenz Panny, Jana Sotáková, and Mattia Veroni
         <br> Submitted; available on eprint as <a href="https://eprint.iacr.org/2023/106.pdf">Report 2023/106</a>.
         <br> Sage code available as GitHub repo <a href="https://github.com/friends-of-quaternions/deuring">friends-of-quaternions/deuring</a>.
         </li>
