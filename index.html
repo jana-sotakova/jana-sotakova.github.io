@@ -52,14 +52,16 @@
          and a part of the
          <a href="https://www.qusoft.org/jana-sotakova/">QuSoft</a> Crypto group.
 
-         I started my PhD in 2019 and expect to graduate in late 2023.
+         I started my PhD in 2019 and expect to graduate in June 2024.
 
-         <br>
-         I am on the academic job market in 2023, seeking a postdoc in post-quantum
-         cryptography or computational number theory.
+         <br><br>
+         I am <b>not</b> on the academic job market anymore
+         and will leave academic research upon graduation.
+
+         <br> Feel free to contact me if you wish to know my reasons.
 
       </p>
-      I am working on:
+      During my PhD, I was interested in:
       <ul>
         <li>post-quantum cryptography, especially isogeny-based cryptography,</li>
         <li>computational number theory,</li>
@@ -76,139 +78,6 @@
     </section>
 
     <section id="current">
-      <h1>News</h1>
-
-      <ul>
-
-        <li>
-          I gave a talk about the
-          <a href="slides/sotakova_leuven2023.pdf">computing traces of endomorphisms</a>,
-          joint project with Travis Morrison, Lorenz Panny, and Michael Wills,
-          at the
-          <a href="https://www.esat.kuleuven.be/cosic/projects/isocrypt/lid4/">ISOCRYPT workshop </a>
-          in Leuven, Belgium.
-
-          Video recording should be available later.
-        </li>
-
-        <li>
-          I attended the 10th
-          <a href="https://www.heidelberg-laureate-forum.org/forum/10th-hlf-2023.html"> Heidelberg Laureate Forum.</a>
-          <br> It was a great experience and opportunity to interact with
-          young researchers and many senior celebrated figures in my field. I would encourage everyone to apply to any
-          of the future instances.
-          <br>
-              <img alt="picture of Jana" src="HLF.jpeg" width="300">
-        </li>
-
-        <li>
-          I gave a talk about the
-          <a href="https://eprint.iacr.org/2023/106">Deuring for the people!</a> collaboration with Jonathan Komada Eriksen, Lorenz Panny, and Mattia Veroni,
-          at the LuCaNT conference, July 10-14, 2023 in Providence, RI.
-          The slides and the video are available at the
-          <a href="https://icerm.brown.edu/events/sc-23-lucant/#schedule-item-5437">ICERM website</a>.
-
-        </li>
-
-        <li>
-          I gave a talk about
-          <a href="https://eprint.iacr.org/2023/340">SALSA PICANTE</a> at the
-          <a href="https://aicrypt2023.aisylab.com/">AICRYPT</a> workshop collocated with Eurocrypt 2023
-        </li>
-
-
-        <li>
-          Finished up the fun project
-          SALSA PICANTE: a machine learning attack on LWE with binary secrets
-          <br> Cathy Li, Jana Sotáková, Emily Wenger, Mohamed Malhou, Evrard Garcelon, Francois Charton, and Kristin Lauter
-          <br> eprint: <a href="https://eprint.iacr.org/2023/340">Report 2023/340</a>;
-          arxiv: <a href="https://arxiv.org/abs/2303.04178">arXiv:2303.04178</a>.
-          <br> Training transformers to learn from LWE samples to try to recover the secrets. Main contributions:
-          reduced data requierement to linear number of samples (machine learning models use millions of samples to learn),
-          added a preprocessing step that turns the samples into ones from which the transformer learns better;
-          novel cross-attention mechanism that can read off the secret from the transformer itself.
-          <br> Pushed the dimensions and hamming weights to n=350 and Hamming weights ~n/10. Still long way to go to threaten
-          real-world schemes, but this is a massive improvement over the previous Salsa paper (n=128 with h=3)!
-        </li>
-
-
-
-        <li>
-      	Disorientation faults in CSIDH were accepted to Eurocrypt 2023! The preprint is here
-      	<a href="https://eprint.iacr.org/2022/1202">ePrint 2022/1202</a>.
-      	This is joint work with
-      	Gustavo Banegas, Juliane Krämer, Tanja Lange, Michael Meyer,
-      	Lorenz Panny, Krijn Reijnders, and Monika Trimoska.
-
-        <br> <i>Summary:</i> While this is a physical attack (specifically, a fault-injection attack), we
-        do exploit a lot of the inherent structure present in computing isogenies.
-        Specifically, our threat model assumes we can flip the direction of some isogeny steps
-        during the class group action computation.
-        We overexamine what information this leaks - and we show that in almost all implementations,
-        one can recover the whole secret key from a very modest number of successful faults!
-      	</li>
-
-        <li>
-          Finished my lovely collaboration with Jonathan Komada Eriksen, Lorenz Panny and Mattia Veroni
-          on making the Deuring correspondence more accessible - and easy to work with.
-          Our preprint is public <a href="https://eprint.iacr.org/2023/106.pdf">on eprint</a>,
-          the code is in a GitHub repo <a href="https://github.com/friends-of-quaternions/deuring">friends-of-quaternions/deuring</a>.
-
-          <br> <i>Summary:</i> We speed up the computation of the Deuring correspodence in general characteristic,
-          using a couple of neat tricks to work with torsion points over extensions -- and selecting which torsion points to work with.
-          We give Sage code for everything: the main parts are the KLPT and IdealToIsogeny algorithms.
-        </li>
-
-
-      	<li> From December 2022 until March 2023, I will be an intern for Kristin Lauter
-	at Meta AI. </li>
-
-
-	<li> I attended the Leuven Isogeny Days 3
-	<a href="https://www.esat.kuleuven.be/cosic/projects/isocrypt/workshops/">workshop</a>.
-	</li>
-
-        <li>
-          I made a
-          <a href="slides/ants_poster_jana.pdf">poster</a>
-          for ANTS XV presenting our new fault attack on CSIDH-like group action.
-          Here are the two separate pictures <a href="slides/neighbourhood_graphs.png">for the neighbourhood graphs</a>
-          and <a href="slides/full_graph.png">here is the full graph</a>.
-
-          <del> We will put the paper online shortly! </del>  <a href="https://eprint.iacr.org/2022/1202"> The paper</a>.
-        </li>
-
-        <li>
-          I am attending the
-          <a href="https://www.ias.edu/pcmi/pcmi-2022-summer-session">PCMI 2022 Summer Session</a>,
-          as a Teaching Assistant for the course on isogenies given by Kristin Lauter in the second week of the Graduate Summer School!
-          <br>
-          Course materials (very similar to the 2021 online version) will be available
-          <a href="PCMI22.html">here</a>.
-        </li>
-
-        <li>
-          On April 5, I gave a talk at the
-          <a href="https://sites.google.com/view/access-seminar">ACCESS seminar</a> talking about
-          <a href="https://ctidh.isogeny.org/">CTIDH: constant time CSIDH</a>.
-          You can check the
-          <a href="slides/sotakova_access_2022.pdf">slides</a>.
-
-          <br>
-          Here are some
-            <a href="writings\CTIDH_exposition.pdf">expository notes</a>
-           I wrote about CTIDH to go with
-          my talk at the ACCESS seminar, focusing
-          on the math ideas behind CTIDH.
-        </li>
-
-        For more (mostly older), see also
-        <a href="news.html">the news section</a>.
-
-      </ul>
-
-
-
 
 
 
@@ -361,7 +230,7 @@ at <a href="https://eprint.iacr.org/2019/1056">eprint</a> or at
 
   <footer>
     <p>
-    Updated:10/16/2023   </p>
+    Updated:02/01/2024   </p>
     <p>© 2019 <a href="https://jana-sotakova.github.io/"> Jana Sotáková</a></p>
 
   </footer>

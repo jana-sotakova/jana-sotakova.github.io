@@ -40,25 +40,153 @@
 
         Here is a list of things going on in my professional life.
 <br><br><br>
-	<li> From December 2022 until March 2023, I will be an intern for Kristin Lauter 
+
+
+        <li>
+          I gave a talk about the
+          <a href="slides/sotakova_leuven2023.pdf">computing traces of endomorphisms</a>,
+          joint project with Travis Morrison, Lorenz Panny, and Michael Wills,
+          at the
+          <a href="https://www.esat.kuleuven.be/cosic/projects/isocrypt/lid4/">ISOCRYPT workshop </a>
+          in Leuven, Belgium.
+
+          Video recording should be available later.
+        </li>
+
+        <li>
+          I attended the 10th
+          <a href="https://www.heidelberg-laureate-forum.org/forum/10th-hlf-2023.html"> Heidelberg Laureate Forum.</a>
+          <br> It was a great experience and opportunity to interact with
+          young researchers and many senior celebrated figures in my field. I would encourage everyone to apply to any
+          of the future instances.
+          <br>
+              <img alt="picture of Jana" src="HLF.jpeg" width="300">
+        </li>
+
+        <li>
+          I gave a talk about the
+          <a href="https://eprint.iacr.org/2023/106">Deuring for the people!</a> collaboration with Jonathan Komada Eriksen, Lorenz Panny, and Mattia Veroni,
+          at the LuCaNT conference, July 10-14, 2023 in Providence, RI.
+          The slides and the video are available at the
+          <a href="https://icerm.brown.edu/events/sc-23-lucant/#schedule-item-5437">ICERM website</a>.
+
+        </li>
+
+        <li>
+          I gave a talk about
+          <a href="https://eprint.iacr.org/2023/340">SALSA PICANTE</a> at the
+          <a href="https://aicrypt2023.aisylab.com/">AICRYPT</a> workshop collocated with Eurocrypt 2023
+        </li>
+
+
+        <li>
+          Finished up the fun project
+          SALSA PICANTE: a machine learning attack on LWE with binary secrets
+          <br> Cathy Li, Jana Sotáková, Emily Wenger, Mohamed Malhou, Evrard Garcelon, Francois Charton, and Kristin Lauter
+          <br> eprint: <a href="https://eprint.iacr.org/2023/340">Report 2023/340</a>;
+          arxiv: <a href="https://arxiv.org/abs/2303.04178">arXiv:2303.04178</a>.
+          <br> Training transformers to learn from LWE samples to try to recover the secrets. Main contributions:
+          reduced data requierement to linear number of samples (machine learning models use millions of samples to learn),
+          added a preprocessing step that turns the samples into ones from which the transformer learns better;
+          novel cross-attention mechanism that can read off the secret from the transformer itself.
+          <br> Pushed the dimensions and hamming weights to n=350 and Hamming weights ~n/10. Still long way to go to threaten
+          real-world schemes, but this is a massive improvement over the previous Salsa paper (n=128 with h=3)!
+        </li>
+
+
+
+        <li>
+      	Disorientation faults in CSIDH were accepted to Eurocrypt 2023! The preprint is here
+      	<a href="https://eprint.iacr.org/2022/1202">ePrint 2022/1202</a>.
+      	This is joint work with
+      	Gustavo Banegas, Juliane Krämer, Tanja Lange, Michael Meyer,
+      	Lorenz Panny, Krijn Reijnders, and Monika Trimoska.
+
+        <br> <i>Summary:</i> While this is a physical attack (specifically, a fault-injection attack), we
+        do exploit a lot of the inherent structure present in computing isogenies.
+        Specifically, our threat model assumes we can flip the direction of some isogeny steps
+        during the class group action computation.
+        We overexamine what information this leaks - and we show that in almost all implementations,
+        one can recover the whole secret key from a very modest number of successful faults!
+      	</li>
+
+        <li>
+          Finished my lovely collaboration with Jonathan Komada Eriksen, Lorenz Panny and Mattia Veroni
+          on making the Deuring correspondence more accessible - and easy to work with.
+          Our preprint is public <a href="https://eprint.iacr.org/2023/106.pdf">on eprint</a>,
+          the code is in a GitHub repo <a href="https://github.com/friends-of-quaternions/deuring">friends-of-quaternions/deuring</a>.
+
+          <br> <i>Summary:</i> We speed up the computation of the Deuring correspodence in general characteristic,
+          using a couple of neat tricks to work with torsion points over extensions -- and selecting which torsion points to work with.
+          We give Sage code for everything: the main parts are the KLPT and IdealToIsogeny algorithms.
+        </li>
+
+
+      	<li> From December 2022 until March 2023, I will be an intern for Kristin Lauter
+	at Meta AI. </li>
+
+
+	<li> I attended the Leuven Isogeny Days 3
+	<a href="https://www.esat.kuleuven.be/cosic/projects/isocrypt/workshops/">workshop</a>.
+	</li>
+
+        <li>
+          I made a
+          <a href="slides/ants_poster_jana.pdf">poster</a>
+          for ANTS XV presenting our new fault attack on CSIDH-like group action.
+          Here are the two separate pictures <a href="slides/neighbourhood_graphs.png">for the neighbourhood graphs</a>
+          and <a href="slides/full_graph.png">here is the full graph</a>.
+
+          <del> We will put the paper online shortly! </del>  <a href="https://eprint.iacr.org/2022/1202"> The paper</a>.
+        </li>
+
+        <li>
+          I am attending the
+          <a href="https://www.ias.edu/pcmi/pcmi-2022-summer-session">PCMI 2022 Summer Session</a>,
+          as a Teaching Assistant for the course on isogenies given by Kristin Lauter in the second week of the Graduate Summer School!
+          <br>
+          Course materials (very similar to the 2021 online version) will be available
+          <a href="PCMI22.html">here</a>.
+        </li>
+
+        <li>
+          On April 5, I gave a talk at the
+          <a href="https://sites.google.com/view/access-seminar">ACCESS seminar</a> talking about
+          <a href="https://ctidh.isogeny.org/">CTIDH: constant time CSIDH</a>.
+          You can check the
+          <a href="slides/sotakova_access_2022.pdf">slides</a>.
+
+          <br>
+          Here are some
+            <a href="writings\CTIDH_exposition.pdf">expository notes</a>
+           I wrote about CTIDH to go with
+          my talk at the ACCESS seminar, focusing
+          on the math ideas behind CTIDH.
+        </li>
+
+        For more (mostly older), see also
+        <a href="news.html">the news section</a>.
+
+
+	<li> From December 2022 until March 2023, I will be an intern for Kristin Lauter
 	at Facebook AI Research. </li>
 
 	<li>
 	We finished our paper <b>Disorientation faults in CSIDH</b>, available as
-	<a href="https://eprint.iacr.org/2022/1202">ePrint 2022/1202</a>. 
-	Joint work with 
+	<a href="https://eprint.iacr.org/2022/1202">ePrint 2022/1202</a>.
+	Joint work with
 	Gustavo Banegas, Juliane Krämer, Tanja Lange, Michael Meyer,
 	Lorenz Panny, Krijn Reijnders, and Monika Trimoska.
-	
-	<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Have you ever been disoriented on a pub crawl? It is not just you, isogenies can be disoriented look at: <a href="https://t.co/z8tU1b7dXt">https://t.co/z8tU1b7dXt</a>. It is a work with:<a href="https://twitter.com/gustavosbanegas?ref_src=twsrc%5Etfw">@gustavosbanegas</a> , <a href="https://twitter.com/hyperelliptic?ref_src=twsrc%5Etfw">@hyperelliptic</a>, Juliane Krämer, <a href="https://twitter.com/mchl_myr?ref_src=twsrc%5Etfw">@mchl_myr</a>, <a href="https://twitter.com/yx7__?ref_src=twsrc%5Etfw">@yx7__</a>, <a href="https://twitter.com/KrijnReijnders?ref_src=twsrc%5Etfw">@KrijnReijnders</a>, <a href="https://twitter.com/JSotakova?ref_src=twsrc%5Etfw">@JSotakova</a>, and <a href="https://twitter.com/mtrimoska?ref_src=twsrc%5Etfw">@mtrimoska</a> <a href="https://t.co/Km0SMwZI4u">https://t.co/Km0SMwZI4u</a></p>&mdash; Gustavo Banegas (@gustavosbanegas) <a href="https://twitter.com/gustavosbanegas/status/1569352334043451393?ref_src=twsrc%5Etfw">September 12, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-	
+
+	<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Have you ever been disoriented on a pub crawl? It is not just you, isogenies can be disoriented look at: <a href="https://t.co/z8tU1b7dXt">https://t.co/z8tU1b7dXt</a>. It is a work with:<a href="https://twitter.com/gustavosbanegas?ref_src=twsrc%5Etfw">@gustavosbanegas</a> , <a href="https://twitter.com/hyperelliptic?ref_src=twsrc%5Etfw">@hyperelliptic</a>, Juliane Krämer, <a href="https://twitter.com/mchl_myr?ref_src=twsrc%5Etfw">@mchl_myr</a>, <a href="https://twitter.com/yx7__?ref_src=twsrc%5Etfw">@yx7__</a>, <a href="https://twitter.com/KrijnReijnders?ref_src=twsrc%5Etfw">@KrijnReijnders</a>, <a href="https://twitter.com/JSotakova?ref_src=twsrc%5Etfw">@JSotakova</a>, and <a href="https://twitter.com/mtrimoska?ref_src=twsrc%5Etfw">@mtrimoska</a> <a href="https://t.co/Km0SMwZI4u">https://t.co/Km0SMwZI4u</a></p>&mdash; Gustavo Banegas (@gustavosbanegas) <a href="https://twitter.com/gustavosbanegas/status/1569352334043451393?ref_src=twsrc%5Etfw">September 12, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 	</li>
 
 
-	<li> I attended the Leuven Isogeny Days 3 
+	<li> I attended the Leuven Isogeny Days 3
 	<a href="https://www.esat.kuleuven.be/cosic/projects/isocrypt/workshops/">workshop</a>.
 	</li>
-	
+
         <li>
           I made a
           <a href="slides/ants_poster_jana.pdf">poster</a>
@@ -92,7 +220,7 @@
           my talk at the ACCESS seminar, focusing
           on the math ideas behind CTIDH.
         </li>
-        
+
 
 
 <li>
